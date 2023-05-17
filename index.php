@@ -1,6 +1,6 @@
 <?php 
 
-require_once("./app/Bridge.php");
+require_once("./app/core/App.php");
 
 $myApp = new App();
 
