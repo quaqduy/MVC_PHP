@@ -1,22 +1,15 @@
-HOME PAGE
-
 <?php 
 
-class Home{
-    function __construct(){
-
+class Home extends Controller{
+    function getHome(){
+        $data = $this->model('studentModel');
+        echo  $data->getStudent();
     }
 
-    public static function getHome(){
-        echo"Get home page";
+    function show(){
     }
 
-    public static function show($index){
-        echo"Show action item ";
-        print_r($index);
-    }
-
-    public static function news(){
+    function news(){
         echo "New action";
     }
 }
