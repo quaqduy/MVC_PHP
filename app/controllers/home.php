@@ -1,22 +1,19 @@
-HOME PAGE
-
 <?php 
 
-class Home{
-    function __construct(){
+class Home extends Controller{
+    function getHome(){
+        $data = $this->model('studentModel');
+        $listStudent = $data->getStudent();
 
+        print_r($listStudent);
+
+        $this->view('home',["dataStudent"=>$listStudent]);
     }
 
-    public static function getHome(){
-        echo"Get home page";
+    function show(){
     }
 
-    public static function show($index){
-        echo"Show action item ";
-        print_r($index);
-    }
-
-    public static function news(){
+    function news(){
         echo "New action";
     }
 }
