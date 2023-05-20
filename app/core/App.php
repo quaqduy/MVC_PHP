@@ -31,7 +31,6 @@ class App {
 
         // Handle params
         $this->params = $arrUrl ? array_values($arrUrl) : [];
-        print_r( $this->params);
         call_user_func_array([$this->controller, $this->action], $this->params );
     }
 

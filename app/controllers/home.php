@@ -3,7 +3,11 @@
 class Home extends Controller{
     function getHome(){
         $data = $this->model('studentModel');
-        echo  $data->getStudent();
+        $listStudent = $data->getStudent();
+
+        print_r($listStudent);
+
+        $this->view('home',["dataStudent"=>$listStudent]);
     }
 
     function show(){
